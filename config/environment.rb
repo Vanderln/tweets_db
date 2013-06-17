@@ -3,7 +3,6 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'twitter'
 require 'rubygems'
-
 require 'uri'
 require 'pathname'
 
@@ -32,10 +31,8 @@ Twitter.configure do |config|
   config.oauth_token_secret = '3r2rhmhOL9D9Qm0n03BWCCuQCMpvaxLUTPP20mMjc'
 end
 
-# Consumer key  iQQlysrvG8tDWoWETdVCuQ
-# Consumer secret X115VnsTax7cutyPAAuwku3yjI3tiBjg10KBiQQAaw
-
-# Access token  953904672-rQbNVDCRsTtHZCIET80xVQKZioVJIRjNwIMrr7Qg
-# Access token secret R8IA7oCSI3Hv2QBBWIeR8S4M0vzc1Vc20EhMFxztxs
-
+# configure :development do
+#   use BetterErrors::Middleware
+#   BetterErrors.application_root = APP_ROOT
+# end
 

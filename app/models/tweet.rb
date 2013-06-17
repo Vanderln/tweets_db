@@ -15,7 +15,7 @@ class Tweet < ActiveRecord::Base
     recent_times = Tweet.order('created_at DESC LIMIT 10').map(&:tweet_created).each_cons(2).map { |a, b| b-a }
     seconds_until_stale = (recent_times.reduce(:+)/recent_times.count).round
     youngest = array.min_by(&:created_at)
-    Time.now - youngest.created_at > seconds_until_stale
+    Time.now - youngest.created_at > 10
   end
 end
 
