@@ -1,4 +1,4 @@
-.container-container {
+.container {
   margin: 20px auto;
   width: 720px;
   padding: 20px;
@@ -6,9 +6,7 @@
   box-shadow: 0 0 20px #DCDCDC  
 }
 
-.container {
-  padding-top: 40px;
-}
+
 
 h1 {
   font-family: 'Open Sans', sans-serif;
@@ -20,4 +18,31 @@ h1 {
 
 input {
   width: 100%;
+}
+
+#spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  height: 200px;
+  width: 200px;
+  text-indent: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-mask-image: url('../spinner.png');
+  background-color: #000;
+  -webkit-animation-name: spinnerRotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinnerRotate {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform:rotate(360deg);
+  }
 }

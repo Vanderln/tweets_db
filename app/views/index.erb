@@ -1,7 +1,14 @@
-<div class="container-container">
-  <form id="user-entry">
-    <input type="text" id="author" placeholder="Type username... tab to submit" autofocus>
+
+<div class="container">
+    <h1>Tweet Now!!!</h1>
+  <form id="user-entry" action="/tweet" method="post">
+    <input type="text" id="author" placeholder="Type your tweet to the world!" autofocus name="tweet" >
+    <input id="shiny_red_tweet_button" type="submit" value="Tweet!">
   </form>
-  <div class="container">
-  </div>
+
+
 </div>
+
+<%if @tweet%>
+<%= @tweet.text%>
+<%end%>
